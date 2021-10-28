@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 require("./models/database");
-const routes = require("./routes/landingRoutes");
+const routes = require("./routes/portfolioRoutes.js");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,9 +25,6 @@ app.use(express.static(staticpath));
 app.set("view engine", "ejs");
 
 //routing
-app.get("/", (req, res) => {
-  res.render("index");
-});
 app.use("/", routes);
 
 //server create
