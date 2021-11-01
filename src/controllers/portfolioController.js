@@ -6,18 +6,19 @@ const Service = require("../models/Services");
 exports.homepage = async (req, res) => {
   try {
     const landingData = await Landing.find({ name: "Kalyan Devkota" });
-    // const aboutData = await About.find({ title: "about" });
+    const aboutData = await About.find({ title: "about" });
     console.log(landingData[0]);
-    // console.log(aboutData[0]);
-    About.find({}, (err, foundItems) => {
+    console.log(aboutData[0]);
+    Service.find({}, (err, foundItems) => {
       if (err) {
         console.log(err);
       } else {
-        aboutData = foundItems[0];
-        console.log(aboutData);
+        serviceData = foundItems;
+        console.log(serviceData);
         res.render("index", {
           landingData: landingData[0],
-          aboutData: aboutData,
+          aboutData: aboutData[0],
+          serviceData: serviceData,
         });
       }
     });
