@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<% var index = 0 %>
 <html lang="en">
   <%- include('../views/partials/head.ejs') %>
 
@@ -13,12 +12,12 @@
         <!-- Masthead Avatar Image-->
         <img
           class="masthead-avatar bg-secondary rounded-circle mb-5"
-          src="assets/img/<%=landingData.image%> "
+          src="assets/img/<%=data.landing[0].image%> "
           alt="..."
         />
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">
-          <%=landingData.name%>
+          <%=data.landing[0].name%>
         </h1>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
@@ -28,7 +27,7 @@
         </div>
         <!-- Masthead Subheading-->
         <p class="masthead-subheading font-weight-light mb-0">
-          <%=landingData.title%>
+          <%=data.landing[0].title%>
         </p>
       </div>
     </header>
@@ -79,7 +78,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[0].image %>"
+                src="assets/img/portfolio/<%= data.services[0].image %>"
                 alt="..."
               />
             </div>
@@ -109,7 +108,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[1].image %>"
+                src="assets/img/portfolio/<%= data.services[1].image %>"
                 alt="..."
               />
             </div>
@@ -139,7 +138,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[2].image %>"
+                src="assets/img/portfolio/<%= data.services[2].image %>"
                 alt="..."
               />
             </div>
@@ -169,7 +168,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[3].image %>"
+                src="assets/img/portfolio/<%= data.services[3].image %>"
                 alt="..."
               />
             </div>
@@ -199,7 +198,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[4].image %>"
+                src="assets/img/portfolio/<%= data.services[4].image %>"
                 alt="..."
               />
             </div>
@@ -229,7 +228,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/<%= serviceData[5].image %>"
+                src="assets/img/portfolio/<%= data.services[5].image %>"
                 alt="..."
               />
             </div>
@@ -254,7 +253,7 @@
         <!-- About Section Content-->
         <div class="row">
           <div class="col text-center ms-auto">
-            <p class="lead"><%= aboutData.description %></p>
+            <p class="lead"><%= data.about[0].description %></p>
           </div>
         </div>
         <!-- About Section Button-->
@@ -431,7 +430,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[0].title %>
+                    <%= data.services[0].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -444,11 +443,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[0].image %>"
+                    src="assets/img/portfolio/<%= data.services[0].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[0].description %></p>
+                  <p class="mb-4"><%= data.services[0].description %></p>
                 </div>
               </div>
             </div>
@@ -486,7 +485,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[1].title %>
+                    <%= data.services[1].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -499,11 +498,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[1].image %>"
+                    src="assets/img/portfolio/<%= data.services[1].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[1].description %></p>
+                  <p class="mb-4"><%= data.services[1].description %></p>
                 </div>
               </div>
             </div>
@@ -541,7 +540,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[2].title %>
+                    <%= data.services[2].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -554,11 +553,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[2].image %>"
+                    src="assets/img/portfolio/<%= data.services[2].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[2].description %></p>
+                  <p class="mb-4"><%= data.services[2].description %></p>
                 </div>
               </div>
             </div>
@@ -596,7 +595,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[3].title %>
+                    <%= data.services[3].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -609,11 +608,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[3].image %>"
+                    src="assets/img/portfolio/<%= data.services[3].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[3].description %></p>
+                  <p class="mb-4"><%= data.services[3].description %></p>
                 </div>
               </div>
             </div>
@@ -651,7 +650,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[4].title %>
+                    <%= data.services[4].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -664,11 +663,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[4].image %>"
+                    src="assets/img/portfolio/<%= data.services[4].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[4].description %></p>
+                  <p class="mb-4"><%= data.services[4].description %></p>
                 </div>
               </div>
             </div>
@@ -706,7 +705,7 @@
                       mb-0
                     "
                   >
-                    <%= serviceData[5].title %>
+                    <%= data.services[5].title %>
                   </h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -719,11 +718,11 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="img-fluid rounded mb-5"
-                    src="assets/img/portfolio/<%= serviceData[5].image %>"
+                    src="assets/img/portfolio/<%= data.services[5].image %>"
                     alt="..."
                   />
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4"><%= serviceData[5].description %></p>
+                  <p class="mb-4"><%= data.services[5].description %></p>
                 </div>
               </div>
             </div>

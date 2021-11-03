@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
-require("./models/database");
-const routes = require("./routes/portfolioRoutes.js");
+const axios = require("axios");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,7 +24,15 @@ app.use(express.static(staticpath));
 app.set("view engine", "ejs");
 
 //routing
-app.use("/", routes);
+app.get("/", (req, res) => {
+  axios
+    .get("https://portfolio-api-kalyan.herokuapp.com/api/v1/index")
+    .then((resp) => {
+      res.render("index", {
+        data: resp.data[0],
+      });
+    });
+});
 
 //server create
 app.listen(port, () => {
